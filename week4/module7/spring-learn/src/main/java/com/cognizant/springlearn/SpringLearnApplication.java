@@ -7,6 +7,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+
+import java.util.ArrayList;
+import java.util.List;
 @SpringBootApplication
 public class SpringLearnApplication {
 	
@@ -23,12 +27,27 @@ public class SpringLearnApplication {
 		
 		LOGGER.info("END");
 	}
+	
+	public static void displayCountries() {
+		LOGGER.info("START: displayCountries()");
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("country.xml");
+		
+		List<Country> countryList = (List<Country>) context.getBean("countryList");
+		
+		for(Country c : countryList) {
+			LOGGER.info(c.toString());
+		}
+		
+		LOGGER.info("END");
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringLearnApplication.class, args);
 		
 		
 		displayCountry();
+		displayCountries();
 	}
 
 }

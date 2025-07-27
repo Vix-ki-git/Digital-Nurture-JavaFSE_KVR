@@ -24,17 +24,16 @@
         <property name="code" value="JP" />
         <property name="name" value="Japan" />
     </bean>
-
     
     <bean id="countryList" class="java.util.ArrayList">
-        <constructor-arg>
-            <list>
-                <ref bean="country" />
-                <ref bean="us" />
-                <ref bean="de" />
-                <ref bean="jp" />
-            </list>
-        </constructor-arg>
+    	<constructor-arg>
+    	<list>
+    		<ref bean="country"/>
+    		<ref bean="us"/>
+    		<ref bean="de"/>
+    		<ref bean="jp"/>
+    	</list>
+    	</constructor-arg>
     </bean>
 
 </beans>
