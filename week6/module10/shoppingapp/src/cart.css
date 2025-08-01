@@ -1,0 +1,19 @@
+table {
+    border-collapse: collapse;
+    margin: 50px auto; 
+    width: 40%;
+    text-align: center;
+  }
+  
+  th, td {
+    border: 2px solid green; 
+    padding: 7px 12px;
+  }
+  
+  thead {
+    
+    font-weight: bold;
+  }
+  
+ 
+  
